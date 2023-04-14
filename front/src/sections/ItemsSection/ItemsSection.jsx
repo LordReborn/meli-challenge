@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { Breadcrumbs } from '../../components'
 import { settings } from '../../settings'
 
 const ItemsSection = () => {
@@ -14,7 +15,7 @@ const ItemsSection = () => {
       const url = `${settings.API_URL}/api/items?q=${query}`
       try {
         const res = await fetch(url, { signal: abortController.signal })
-        const json = await JSON.parse(res)
+        const json = await res.json()
         setData(json)
       } catch (e) {
         console.error(e)
@@ -28,7 +29,13 @@ const ItemsSection = () => {
     }
   }, [searchParams])
 
-  return <div>ItemsSection</div>
+  if (!data) return null
+
+  return (
+    <div>
+      <Breadcrumbs categories={data?.categories} />
+    </div>
+  )
 }
 
 export default ItemsSection

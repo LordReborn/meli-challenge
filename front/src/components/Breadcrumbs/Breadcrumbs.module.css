@@ -1,0 +1,12 @@
+.container {
+  margin: 1em 0;
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: grey;
+}
+
+.container span + span::before {
+  content: '>';
+  margin: 0 0.5em;
+}
