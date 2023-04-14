@@ -14,10 +14,10 @@ const ListItem = ({ item }) => {
           <data className={styles.prices} value={`$${item.prices.amount}`}>
             ${Number(item.prices.amount).toLocaleString()}
           </data>
-          <text className={styles.title}>{item.title}</text>
+          <span className={styles.title}>{item.title}</span>
         </div>
         <div className={styles.address}>
-          <text>{item.location}</text>
+          <span>{item.location}</span>
         </div>
       </article>
       <br />
