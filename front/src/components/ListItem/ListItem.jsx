@@ -14,10 +14,10 @@ const ListItem = ({ item }) => {
           <data className={styles.prices} value={`$${item.prices.amount}`}>
             ${Number(item.prices.amount).toLocaleString()}
           </data>
-          <text>{item.title}</text>
+          <text className={styles.title}>{item.title}</text>
         </div>
         <div className={styles.address}>
-          <text>Capital federal</text> {/* ToDo add city to BFF endpoint */}
+          <text>{item.location}</text>
         </div>
       </article>
       <br />
@@ -38,6 +38,7 @@ ListItem.propTypes = {
       currency: PropTypes.string,
       amount: PropTypes.number,
       decimals: PropTypes.number
-    })
+    }),
+    location: PropTypes.string
   })
 }

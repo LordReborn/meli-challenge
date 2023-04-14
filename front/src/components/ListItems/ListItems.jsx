@@ -28,7 +28,8 @@ ListItems.propTypes = {
         currency: PropTypes.string,
         amount: PropTypes.number,
         decimals: PropTypes.number
-      })
+      }),
+      location: PropTypes.string
     })
   )
 }

@@ -32,10 +32,10 @@ const ItemsSection = () => {
   if (!data) return null
 
   return (
-    <div>
+    <>
       <Breadcrumbs categories={data?.categories} />
       <ListItems items={data?.items} />
-    </div>
+    </>
   )
 }
 

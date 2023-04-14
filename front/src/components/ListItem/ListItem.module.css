@@ -36,11 +36,28 @@
   width: 100%;
 }
 
+.title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
 .prices {
   font-size: 1.2em;
   margin-bottom: 0.5em;
 }
 
 .address {
-  width: 150px;
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .address {
+    display: flex;
+    text-justify: center;
+    width: 200px;
+    font-size: 0.8em;
+  }
 }

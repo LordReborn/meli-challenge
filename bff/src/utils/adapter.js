@@ -1,8 +1,12 @@
+const { sanitize } = require('./common')
+
 const adapter = (() => {
   const list = (data) => {
     const author = { name: 'Jonás', lastname: 'Aguilar' }
-
-    const categories = data.filters[0].values[0].path_from_root?.map((categorie) => categorie.name) || []
+    const categories =
+      data.filters[0].values[0].path_from_root?.map(
+        (categorie) => categorie.name
+      ) || []
     const items = data.results.map((item) => {
       const [amount, decimals] = `${item.price}`.split('.')
       return {
@@ -15,7 +19,8 @@ const adapter = (() => {
         },
         picture: item.thumbnail,
         condition: item.condition,
-        free_shipping: item.shipping.free_shipping
+        free_shipping: item.shipping.free_shipping,
+        location: sanitize(item.address.city_name)
       }
     })
     return { author, categories, items }
