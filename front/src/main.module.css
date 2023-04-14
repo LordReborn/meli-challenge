@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    --container-padding-x: 0;
+}
+
+@media (min-width: 700px) {
+    body { 
+        --container-padding-x: 0 10%; 
+    }
+}
