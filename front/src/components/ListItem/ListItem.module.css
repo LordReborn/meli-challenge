@@ -1,0 +1,46 @@
+.container:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.container:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.container article {
+  height: 150px;
+  background-color: #fff;
+  display: flex;
+  padding: 1em;
+  gap: 2em; /*Double of padding*/
+  align-items: center;
+}
+
+.imageContainer {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer img {
+  width: 90px;
+  height: 90px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.prices {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.address {
+  width: 150px;
+}

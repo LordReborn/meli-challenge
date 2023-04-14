@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { Breadcrumbs } from '../../components'
+import { Breadcrumbs, ListItems } from '../../components'
 import { settings } from '../../settings'
 
 const ItemsSection = () => {
@@ -34,6 +34,7 @@ const ItemsSection = () => {
   return (
     <div>
       <Breadcrumbs categories={data?.categories} />
+      <ListItems items={data?.items} />
     </div>
   )
 }

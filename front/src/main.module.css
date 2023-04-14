@@ -2,10 +2,11 @@ body {
   margin: 0;
   --container-padding-x: 0;
   font-size: 18px;
+  background-color: #ebebeb;
 }
 
 @media (min-width: 700px) {
   body {
-    --container-padding-x: 0 10%;
+    --container-padding-x: 0 20%;
   }
 }
