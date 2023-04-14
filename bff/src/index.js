@@ -13,7 +13,7 @@ app.get('/ping', (_req, res) => {
 app.get('/api/items', (req, res) => {
   const { q } = req.query
   let url = 'https://api.mercadolibre.com/sites/MLA/search'
-  if (q) url += `?q=${q}`
+  if (q) url += `?q=${q}&limit=4`
   fetch(url)
     .then((response) => response.json())
     .then((data) => res.send(adapter.list(data)))
