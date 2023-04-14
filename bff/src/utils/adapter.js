@@ -7,7 +7,7 @@ const adapter = (() => {
       data.filters[0].values[0].path_from_root?.map(
         (categorie) => categorie.name
       ) || []
-    const items = data.results.map((item) => {
+    const items = data.results.slice(0, 4).map((item) => {
       const [amount, decimals] = `${item.price}`.split('.')
       return {
         id: item.id,
