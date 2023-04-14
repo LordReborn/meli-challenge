@@ -32,7 +32,7 @@ const adapter = (() => {
     const author = { name: 'Jonás', lastname: 'Aguilar' }
     const item = {
       id: itemData.id,
-      title: itemData.id,
+      title: itemData.title,
       price: {
         currency: itemData.currency_id,
         amount: parseInt(amount),
