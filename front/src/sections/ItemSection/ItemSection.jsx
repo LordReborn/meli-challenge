@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Breadcrumbs, ShowItem } from '../../components'
 import { settings } from '../../settings'
 
 const ItemSection = () => {
@@ -26,8 +27,14 @@ const ItemSection = () => {
       abortController.abort()
     }
   }, [id])
+  if (!data) return null
 
-  return <div></div>
+  return (
+    <>
+      <Breadcrumbs categories={['Falta', 'Devolver', 'Categoria']} />
+      <ShowItem item={data.item} />
+    </>
+  )
 }
 
 export default ItemSection

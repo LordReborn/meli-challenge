@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import styles from './ListItem.module.css'
+import { getDecimals } from '../../utils/common'
 
 const ListItem = ({ item }) => {
   return (
@@ -13,6 +14,7 @@ const ListItem = ({ item }) => {
         <div className={styles.info}>
           <data className={styles.price} value={`$${item.price.amount}`}>
             ${Number(item.price.amount).toLocaleString()}
+            <sup>{getDecimals(item.price.decimals)}</sup>
           </data>
           <span className={styles.title}>{item.title}</span>
         </div>

@@ -10,7 +10,7 @@
 
 .container article {
   height: 150px;
-  background-color: #fff;
+  background-color: var(--card-color);
   display: flex;
   padding: 1em;
   gap: 2em; /*Double of padding*/
