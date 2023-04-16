@@ -12,7 +12,7 @@ const adapter = (() => {
       return {
         id: item.id,
         title: item.title,
-        prices: {
+        price: {
           currency: item.currency_id,
           amount: parseInt(amount),
           decimals: parseInt(decimals || 0)

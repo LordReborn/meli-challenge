@@ -11,8 +11,8 @@ const ListItem = ({ item }) => {
           <img alt={item.title} src={item.picture} />
         </div>
         <div className={styles.info}>
-          <data className={styles.prices} value={`$${item.prices.amount}`}>
-            ${Number(item.prices.amount).toLocaleString()}
+          <data className={styles.price} value={`$${item.price.amount}`}>
+            ${Number(item.price.amount).toLocaleString()}
           </data>
           <span className={styles.title}>{item.title}</span>
         </div>
@@ -34,7 +34,7 @@ ListItem.propTypes = {
     free_shipping: PropTypes.bool,
     condition: PropTypes.string,
     picture: PropTypes.string,
-    prices: PropTypes.shape({
+    price: PropTypes.shape({
       currency: PropTypes.string,
       amount: PropTypes.number,
       decimals: PropTypes.number
