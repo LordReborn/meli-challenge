@@ -14,7 +14,8 @@ const ShowItem = ({ item }) => {
         <dl className={styles.info}>
           <p>
             <span>
-              {CONDITION_TEXT.spanish[item.condition] || DEFAULT_CONDITION_TEXT}
+              {CONDITION_TEXT.spanish[item.condition] ||
+                DEFAULT_CONDITION_TEXT.spanish}
               {' - '}
               {item.sold_quantity}
             </span>
